@@ -1,1 +1,1 @@
-declare module "ethereum-input-data-decoder"
+declare module "ethereum-input-data-decoder-without-fs"
