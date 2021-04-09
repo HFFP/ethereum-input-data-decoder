@@ -23,17 +23,12 @@
 ## Install
 
 ```bash
-npm install ethereum-input-data-decoder
+npm install ethereum-input-data-decoder-without-fs
 ```
 
 ## Getting started
 
 Pass [ABI](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI) file path to decoder constructor:
-
-```javascript
-const InputDataDecoder = require('ethereum-input-data-decoder');
-const decoder = new InputDataDecoder(`${__dirname}/abi.json`);
-```
 
 Alternatively, you can pass ABI array object to constructor;
 
