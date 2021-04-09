@@ -1,5 +1,4 @@
 const path = require('path')
-const fs = require('fs')
 const meow = require('meow')
 const BN = require('bn.js')
 const InputDataDecoder = require('./')
@@ -32,9 +31,6 @@ if (cli.input && cli.input.length > 0) {
   input = cli.input[0]
   run(abi, input)
 } else if (input) {
-  try {
-    input = fs.readFileSync(path.resolve(input))
-  } catch(err) { }
   run(abi, input)
 } else {
   input = ''
