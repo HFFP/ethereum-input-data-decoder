@@ -4,26 +4,6 @@ const InputDataDecoder = require('../index')
 
 test('decoder', t => {
   // https://etherscan.io/tx/0xa6f019f2fc916bd8df607f1c99148ebb06322999ff08bc88927fe8406acae1b2
-  const data = fs.readFileSync(`${__dirname}/data/abi1_input_data.txt`)
-  t.test('abi filepath', t => {
-    t.plan(6)
-    const decoder = new InputDataDecoder(`${__dirname}/data/abi1.json`)
-
-    const result = decoder.decodeData(data)
-    t.equal(result.method, 'registerOffChainDonation')
-    t.deepEqual(result.types, [
-      'address',
-      'uint256',
-      'uint256',
-      'string',
-      'bytes32'
-    ])
-    t.equal(result.inputs[0].toString(16), '5a9dac9315fdd1c3d13ef8af7fdfeb522db08f02')
-    t.equal(result.inputs[1].toString(16), '58a20230')
-    t.equal(result.inputs[2].toString(16), '402934')
-    t.equal(result.inputs[3], 'BTC')
-    t.end()
-  })
 
   t.test('abi array object', t => {
     t.plan(7)
