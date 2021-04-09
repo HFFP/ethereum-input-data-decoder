@@ -1,5 +1,5 @@
 {
-  "name": "ethereum-input-data-decoder",
+  "name": "ethereum-input-data-decoder-without-fs",
   "version": "0.3.3",
   "description": "Ethereum smart contract transaction input data decoder",
   "main": "dist/index.js",

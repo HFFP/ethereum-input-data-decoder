@@ -1,4 +1,3 @@
-const fs = require('fs')
 const ethabi = require('ethereumjs-abi')
 const ethers = require('ethers')
 const Buffer = require('buffer/').Buffer
@@ -8,9 +7,7 @@ class InputDataDecoder {
   constructor (prop) {
     this.abi = []
 
-    if (typeof prop === `string`) {
-      this.abi = JSON.parse(fs.readFileSync(prop))
-    } else if (prop instanceof Object) {
+    if (prop instanceof Object) {
       this.abi = prop
     } else {
       throw new TypeError(`Must pass ABI array object or file path to constructor`)
